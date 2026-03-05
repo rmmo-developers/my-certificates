@@ -444,8 +444,8 @@ export default function GradApplicantsPage() {
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4">
                 <div className="bg-white rounded-[24px] p-6 md:p-10 border-2 border-blue-100 shadow-sm">
                   <h2 className="text-xl font-black text-slate-900 mb-1">{isEnglish ? "Review Application" : "Review Application"}</h2>
-                  <p className="text-RED-400 mb-1 font-bold text-[13px]">{isEnglish ? "Please double-check all your information before submitting." : "SURIIN nang MABUTI ang iyong impormasyon BAGO IPASA. Puwedeng bumalik para i-edit ang iyong mga entry."}</p>
-                   <p className="text-red-500 mb-5 font-bold text-[13px]">{isEnglish ? "REMINDER: AVOID DOUBLE SUBMISSIONS FOR YOUR APPLICATION FORM, PLEASE CHECK ALL THE FIELDS BEFORE SUBMITTING THIS FORM." : "PAALALA: IAWASAN ANG MAGPASA NG DOBLENG APPLICATION FORM, PAKI-CHECK NG MABUTI BAGO MAGPASA."}</p>
+                  <p className="text-RED-400 font-bold text-[13px]">{isEnglish ? "Please double-check all your information before submitting. You can go back to edit your details." : "SURIIN nang MABUTI ang iyong impormasyon BAGO IPASA. Puwedeng bumalik para i-edit ang iyong mga detalye."}</p>
+                   <p className="text-red-500 mb-5 font-bold text-[13px]">{isEnglish ? "REMINDER: AVOID DOUBLE SUBMISSIONS FOR YOUR APPLICATION FORM, PLEASE CHECK ALL THE FIELDS BEFORE SUBMITTING THIS FORM." : "PAALALA: IWASAN ANG MAGPASA NG DOBLENG APPLICATION FORM, PAKI-CHECK NG MABUTI BAGO MAGPASA."}</p>
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-[11px] font-black text-blue-700 uppercase tracking-widest mb-3 border-b pb-1.5">Personal Details</h3>
