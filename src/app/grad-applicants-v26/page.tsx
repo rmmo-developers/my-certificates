@@ -12,9 +12,9 @@ const ActionModal = ({ isOpen, title, message, onConfirm, onCancel, confirmText 
   const modalTitle = isEnglish ? "You are about to submit your Application" : "Ipapasa mo na ang iyong Application";
   const modalMessage = isEnglish 
     ? message 
-    : `Ang anumang maling impormasyon sa form na ito ay magreresulta sa pagtanggi at diskwalipikasyon ng iyong aplikasyon.\n\nInirereserba namin ang karapatang i-verify ang kawastuhan ng impormasyon, at ang anumang palsipikasyon ay hahantong sa agarang pagtatanggal sa konsiderasyon.\n\nSa pagsusumite ng form na ito, sumasang-ayon ka sa mga tuntunin at nauunawaan na ang anumang maling representasyon ay maaaring may legal na kahihinatnan.`;
-  const modalConfirm = isEnglish ? confirmText : "Pinatutunayan at Ipapasa";
-  const modalCancel = isEnglish ? "Cancel" : "I-cancel";
+    : `Ang anumang maling impormasyon sa form na ito ay magreresulta sa REJECTION at DISQUALIFY ng iyong Application Form.\n\nBinibigyan namin ng karapatang i-verify ang kawastuhan ng impormasyon, at ang anumang Falsification  ay hahantong sa agarang pagtatanggal sa konsiderasyon.\n\nSa pagsusumite ng form na ito, sumasang-ayon ka sa mga tuntunin at nauunawaan na ang anumang maling representasyon ay maaaring may legal na aksyon.`;
+  const modalConfirm = isEnglish ? confirmText : "Pinatutunayan ko at Ipasa na";
+  const modalCancel = isEnglish ? "Back to review" : "Bumalik para i-review ulit";
 
   return (
     <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-[200]">
@@ -265,8 +265,8 @@ export default function GradApplicantsPage() {
                 </div>
                 <p className="text-red-600">
                   {isEnglish 
-                    ? "Reminder: Avoid double submission to prevent double records."
-                    : "Paalala: Iwasan ang magdoble ng pagpasa ng Application Form. Para hindi magdoble ang records."}
+                    ? "REMINDER: Avoid double submission to prevent double records."
+                    : "PAALALA: IWASAN ang MAGPASA nang DOBLE sa Application Form na ito. Para MAIWASAN ang PROBLEMA sa iyong RECORDS. Kapag may mali sa iyong ipinasa i-contact kami sa records.rmmo@gmail.com"}
                 </p>                
               </div>
               <button onClick={handleGoToPrivacy} className="cursor-pointer mt-8 w-full py-4 bg-blue-700 text-white rounded-[20px] font-bold text-lg hover:bg-blue-800 transition-all">
@@ -444,7 +444,8 @@ export default function GradApplicantsPage() {
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4">
                 <div className="bg-white rounded-[24px] p-6 md:p-10 border-2 border-blue-100 shadow-sm">
                   <h2 className="text-xl font-black text-slate-900 mb-1">{isEnglish ? "Review Application" : "Review Application"}</h2>
-                  <p className="text-slate-500 mb-5 font-bold text-[13px]">{isEnglish ? "Please double-check all your information before submitting." : "Suriin nang mabuti ang iyong impormasyon bago ang ipasa."}</p>
+                  <p className="text-RED-400 mb-5 font-bold text-[13px]">{isEnglish ? "Please double-check all your information before submitting." : "SURIIN nang MABUTI ang iyong impormasyon BAGO IPASA. Puwedeng bumalik para i-edit ang iyong mga entry."}</p>
+                   <p className="text-red-500 mb-5 font-bold text-[13px]">{isEnglish ? "REMINDER: AVOID DOUBLE SUBMISSIONS FOR YOUR APPLICATION FORM, PLEASE CHECK ALL THE FIELDS BEFORE SUBMITTING THIS FORM." : "PAALALA: IAWASAN ANG MAGPASA NG DOBLENG APPLICATION FORM, PAKI-CHECK NG MABUTI BAGO MAGPASA."}</p>
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-[11px] font-black text-blue-700 uppercase tracking-widest mb-3 border-b pb-1.5">Personal Details</h3>
